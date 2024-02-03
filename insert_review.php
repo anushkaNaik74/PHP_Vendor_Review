@@ -60,8 +60,8 @@
         <td><?php echo $row['pr_vendor_review_desc']?></td>
         <td><?php echo $row['pr_vendor_review_status']?></td>
         <td>
-          <a href="edit.php?id=<?php echo $id; ?>">Edit</a>
-          <a href="delete.php?id=<?php echo $id; ?>" onclick = "return confirm('Are you sure?')">Delete</a>
+          <a href="edit_review.php?id=<?php echo $id; ?>">Edit</a>
+          <a href="delete_review.php?id=<?php echo $id; ?>" onclick = "return confirm('Are you sure?')">Delete</a>
         </td>
 
       </tr>
@@ -106,7 +106,7 @@
 
         if (mysqli_query($con, $query)) {
             echo'<script>alert("Review Uploaded Successfully");</script>';
-            header('location: insert.php');
+            header('location: insert_review.php');
         } else {
             echo "Error: " . $query . "<br>" . mysqli_error($con);
         }
